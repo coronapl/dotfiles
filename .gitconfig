@@ -1,0 +1,14 @@
+[user]
+    name = coronapl
+    email = 59809785+coronapl@users.noreply.github.com
+[github]
+    user = coronalp
+[core]
+    editor = vim
+    whitespace = trailing-space,cr-at-eol,tab-in-indent
+    excludesfiles = '~/.gitignore'
+[diff]
+    tool = vimdiff
+[color]
+    ui = auto
+
