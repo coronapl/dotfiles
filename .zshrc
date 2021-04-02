@@ -33,7 +33,7 @@ alias rm="rm -i"
 alias c="clear"
 
 # Manage dotfiles as a bare repository
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Do not show untracked files
 config config --local status.showUntrackedFiles no
 
