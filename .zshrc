@@ -17,7 +17,6 @@ alias egrep="egrep --color=always"
 alias fgrep="fgrep --color=always"
 
 # Move to important directories
-alias ws="cd ~/Workspace"
 alias docs="cd ~/Documents"
 
 # Open important files
