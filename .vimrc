@@ -5,7 +5,6 @@
 "     .vimrc
 " Sections:
 "     -> General
-"     -> Plugins
 "     -> Maps
 "     -> UI
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -47,32 +46,6 @@ set ttyfast " Make terminal more fast
 autocmd TerminalWinOpen,BufWinEnter * if &buftype == 'terminal'
     \ | setlocal nonumber
     \ | endif
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Section: Plugins
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin('~/.vim/plugged')
-" Tpope essentials
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-commentary'
-" Colorschemes
-    Plug 'altercation/vim-colors-solarized'
-" Others
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'vimwiki/vimwiki'
-call plug#end()
-
-" FZF use 15 % of window
-let g:fzf_layout = { 'down': '15%' }
-
-" Change vimwiki default directory
-let g:vimwiki_list = [{'path': '~/Wiki/',
-                     \ 'index': 'main',
-                     \ 'syntax': 'markdown',
-                     \ 'ext': '.md'}]
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Section: Maps
@@ -142,16 +115,6 @@ nnoremap <C-f> :/
 
 " Remove highlighting
 nnoremap <leader>o :noh<CR>
-
-" * Plugins
-" ** FZF
-" Open fuzzy Finder
-noremap <C-p> :FZF<CR>
-
-" ** Fugitive
-" Open Git window
-nnoremap <leader>g :G<CR>
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Section: UI
