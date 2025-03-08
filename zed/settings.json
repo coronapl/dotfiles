@@ -1,0 +1,44 @@
+{
+  // Disable telemetry
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  // Basics
+  "format_on_save": "on",
+  "indent_guides": {
+    "enabled": false
+  },
+  // Configure AI assistant
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
+    },
+    "version": "2"
+  },
+  // UI
+  "theme": "Tokyo Night Storm",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "JetBrains Mono",
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false
+    // "show": false
+  },
+  // Vim
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true
+  },
+  // Terminal
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    }
+  }
+}

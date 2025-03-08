@@ -1,16 +1,4 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer:
-"     @coronapl
-" File:
-"     .vimrc
-" Sections:
-"     -> General
-"     -> Maps
-"     -> UI
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Section: General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set history=500     " Only remember 500 lines
@@ -40,13 +28,6 @@ set shiftwidth=4
 set smartindent
 set autoindent
 
-set ttyfast " Make terminal more fast
-
-" Do not show numbers on terminal window
-autocmd TerminalWinOpen,BufWinEnter * if &buftype == 'terminal'
-    \ | setlocal nonumber
-    \ | endif
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Section: Maps
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -62,13 +43,13 @@ nnoremap 0 ^
 
 " * Buffers
 " Save current buffer
-nnoremap <leader>s :w<CR>
+nnoremap <leader>bs :w<CR>
 " Close current buffer
-nnoremap <leader>d :bd<CR>
+nnoremap <leader>bd :bd<CR>
 " Close current buffer event if it has changes
-nnoremap <leader>D :bd!<CR>
+nnoremap <leader>bD :bd!<CR>
 " Show all buffers
-nnoremap <leader>b :ls<CR>
+nnoremap <leader><leader> :ls<CR>
 " Move to next buffer
 nnoremap <leader>n :bn<CR>
 " Move to previous buffer
@@ -83,14 +64,6 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 " Move to the right window
 nnoremap <leader>l :wincmd l<CR>
-
-" * Terminal
-" Move to normal mode in terminal window
-tnoremap jk <C-\><C-N>
-" Open terminal in next buffer
-nnoremap <leader>tn :terminal ++curwin<CR>
-" Open terminal window to the right
-nnoremap <leader>tv :vertical botright terminal<CR>
 
 " * Editing
 " Move line down
@@ -119,13 +92,14 @@ nnoremap <leader>o :noh<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Section: UI
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax enable   " Enable syntax highlighting
-set nowrap      " Do not wrap lines
+set nowrap          " Do not wrap lines
 
-colorscheme pablo
+set background=dark
+syntax on
 
 set scrolloff=8     " Show 8 lines from cursor
 set number          " Show line numbers
+set relativenumber
 set laststatus=2    " Always show status line
 set ruler           " Show current position
 set wildmenu        " Enhance command-line completion
@@ -147,4 +121,3 @@ nnoremap <leader>z :set list!<CR>
 " Hightlight column 81
 highlight ColorColumn ctermbg=237
 call matchadd('ColorColumn', '\%81v', 100)
-

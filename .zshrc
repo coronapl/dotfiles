@@ -1,27 +1,29 @@
-################################################################################
-# Maintainer:
-#     @coronapl
-# File:
-#     .zshrc
-################################################################################
+# == Oh My Zsh Cofiguration ==
 
-# Simple prompt
-export PS1="%1~ $ "
+# Path
+export ZSH="$HOME/.oh-my-zsh"
 
-# Colors
-export CLICOLOR=1
-export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+# Theme
+ZSH_THEME="robbyrussell"
 
-alias grep="grep --color=always"
-alias egrep="egrep --color=always"
-alias fgrep="fgrep --color=always"
+# Plugins
+plugins=(git aws)
 
-# Move to important directories
-alias docs="cd ~/Documents"
+# ?
+source $ZSH/oh-my-zsh.sh
 
-# Open important files
-alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
+# == General ==
+# Use Neovim instead of vim
+alias vim="nvim"
+alias vi="nvim"
+
+# Load Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# AWS default profile
+export AWS_PROFILE="REPLACE_HERE"
 
 # Confirm before overwriting something
 alias cp="cp -i"
@@ -31,12 +33,13 @@ alias rm="rm -i"
 # Clear terminal screen
 alias c="clear"
 
-# Manage dotfiles as a bare repository
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-# Do not show untracked files
-config config --local status.showUntrackedFiles no
+# Move to important directories
+alias docs="cd ~/Documents"
+alias ws="cd ~/workspace"
 
-# Load Node Version Manager
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# Shortcuts
+alias asl="aws sso login"
+
+# Completions
+source ~/scripts/gh-completions.zsh
 

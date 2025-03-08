@@ -1,6 +1,7 @@
 [user]
-    name = coronapl
+    name = REPLACE_HERE
     email = 59809785+coronapl@users.noreply.github.com
+    signingkey = REPLACE_HERE
 [github]
     user = coronalp
 [core]
@@ -11,4 +12,7 @@
     tool = vimdiff
 [color]
     ui = auto
-
+[gpg]
+    format = ssh
+[commit]
+    gpgsign = true
